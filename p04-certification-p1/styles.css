@@ -27,7 +27,7 @@ label {
 }
 
 .radio {
-  display: inline-block;
+  display: flex;
 
   flex-direction: column;
 }
@@ -41,7 +41,9 @@ select {
 }
 
 .checkbox-list {
-  /* display: inline-block; */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 section {
