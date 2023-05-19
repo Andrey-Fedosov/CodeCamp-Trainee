@@ -57,3 +57,21 @@ console.log(matchingWords); // here we get in console array which contains match
 ////////////////////////////////////////////////
 
 ///// 1.6 - using wildcard period to match everything that match to regex
+
+//////// for this i should train map method
+let resultArr = ['3:1', '2:2', '0:1'];
+let tempArr = [];
+let team1Result = 0;
+let team2Result = 0;
+for (let j = 0; j < resultArr.length; j++) {
+  tempArr.push(resultArr[j].split(':'));
+}
+for (let i = 0; i < tempArr.length; i++) {
+  if (Number(tempArr[i][0]) > Number(tempArr[i][1])) {
+    team1Result += 3;
+  } else if (Number(tempArr[i][0]) === Number(tempArr[i][1])) {
+    team1Result += 1;
+  }
+}
+
+console.log(team1Result);
