@@ -31,47 +31,81 @@
 
 ///// 1.3 - case ignorance flag --"i"--
 
-const myRegex = /love/i;
-const myRegex1 = /love/;
+// const myRegex = /love/i;
+// const myRegex1 = /love/;
 
-const myString = 'All we need  is LOve. loVe is all we need';
+// const myString = 'All we need  is LOve. loVe is all we need';
 
-const resultTest = myRegex.test(myString);
+// const resultTest = myRegex.test(myString);
 
-console.log(resultTest); // return true because  regex has "i"-flag
-console.log(myRegex1.test(myString)); // return false because regex1 has no "i-flag"
+// console.log(resultTest); // return true because  regex has "i"-flag
+// console.log(myRegex1.test(myString)); // return false because regex1 has no "i-flag"
 
 ///// 1.4 - match() method -  для извлечения из строки совпадающегорегулярного выражения
 
-const matchingWord = myString.match(myRegex); // here myRegex = /love/i (look at line # 34)
-console.log(matchingWord); // we get array: ["LOve", index: 16, input: "All we need  is LOve. loVe is all we need", groups: undefined]
-console.log(matchingWord[0]); // we get certain word - LOve -i.e. the first match;
+// const matchingWord = myString.match(myRegex); // here myRegex = /love/i (look at line # 34)
+// console.log(matchingWord); // we get array: ["LOve", index: 16, input: "All we need  is LOve. loVe is all we need", groups: undefined]
+// console.log(matchingWord[0]); // we get certain word - LOve -i.e. the first match;
 
 ///// 1.5 find more than one match - "g" flag
 // g flag allows to find all matching words in working string
 
-const matchingWords = myString.match(/love/gi);
-console.log(matchingWords); // here we get in console array which contains matching words i.e. [LOve, loVe]
+// const matchingWords = myString.match(/love/gi);
+// console.log(matchingWords); // here we get in console array which contains matching words i.e. [LOve, loVe]
 
 ////////////////////////////18.05.2023///////////
 ////////////////////////////////////////////////
 
 ///// 1.6 - using wildcard period to match everything that match to regex
+//////22.05.2023/////////////////////////////////////
+// if you need to find match any symbol  you can use . (dot)
+// let hamStr = 'i have got a hamster';
+// let hugStr = 'I want to hug you. hurry up.';
+// let hurrStr = 'you should hurry up';
+
+// let huRegex = /hu./;
+
+// console.log(huRegex.test(hamStr)); //false
+// console.log(huRegex.test(hugStr)); //true
+// console.log(huRegex.test(hurrStr)); //true
+
+// const matchWord1 = hurrStr.match(huRegex);
+
+// console.log(matchWord1); // return: ["hur", index: 11, input: "you should hurry up", groups: undefined]
+// const matchWord2 = hugStr.match(huRegex);
+// console.log(matchWord2);
+
+////////////////////////////////////////
+///1.7 -match single character with mutiple possibilities
+
+// for defininig group of characters you wish to match you should use []
+
+let bigStr = 'big';
+let bagStr = 'bag';
+let bugStr = 'bog and buggy';
+
+let bgRegex = /[iu]/;
+
+const bgTest = bgRegex.test(bigStr);
+const bgLetters = bugStr.match(bgRegex);
+console.log(bgLetters, bgTest);
 
 //////// for this i should train map method
-let resultArr = ['3:1', '2:2', '0:1'];
-let tempArr = [];
-let team1Result = 0;
-let team2Result = 0;
-for (let j = 0; j < resultArr.length; j++) {
-  tempArr.push(resultArr[j].split(':'));
-}
-for (let i = 0; i < tempArr.length; i++) {
-  if (Number(tempArr[i][0]) > Number(tempArr[i][1])) {
-    team1Result += 3;
-  } else if (Number(tempArr[i][0]) === Number(tempArr[i][1])) {
-    team1Result += 1;
-  }
-}
+// let resultArr = ['3:1', '2:2', '0:1'];
+// let tempArr = [];
+// let team1Result = 0;
+// let team2Result = 0;
+// for (let j = 0; j < resultArr.length; j++) {
+//   tempArr.push(resultArr[j].split(':'));
+// }
+// for (let i = 0; i < tempArr.length; i++) {
+//   if (Number(tempArr[i][0]) > Number(tempArr[i][1])) {
+//     team1Result += 3;
+//   } else if (Number(tempArr[i][0]) === Number(tempArr[i][1])) {
+//     team1Result += 1;
+//   }
+// }
 
-console.log(team1Result);
+// console.log(team1Result);
+
+//////above there is one of codewarz task
