@@ -80,15 +80,56 @@
 
 // for defininig group of characters you wish to match you should use []
 
-let bigStr = 'big';
-let bagStr = 'bag';
-let bugStr = 'bog and buggy';
+// let bigStr = 'big';
+// let bagStr = 'bag';
+// let bugStr = 'bog and buggy';
 
-let bgRegex = /[iu]/;
+// let bgRegex = /[iu]/; // it finds all words with letters i or u
 
-const bgTest = bgRegex.test(bigStr);
-const bgLetters = bugStr.match(bgRegex);
-console.log(bgLetters, bgTest);
+// const bgTest = bgRegex.test(bugStr);
+// const bgLetters = bugStr.match(bgRegex);
+// console.log(bgLetters, bgTest);
+
+//////////////////////////////23.05.2023
+////////////////////////////////////////
+
+//1.8// match letter of alphabet (using '-')
+let catStr = 'cat';
+let batStr = 'bat';
+let matStr = 'mat';
+
+let bgRegex = /[a-e]at/;
+const catStrMatch = catStr.match(bgRegex);
+const batStrMatch = batStr.match(bgRegex);
+const matStrMatch = matStr.match(bgRegex);
+
+console.log(
+  `cat string match ${catStrMatch}, bat string match ${batStrMatch}, mat string match ${matStrMatch}`
+);
+
+//////1.9 match numbers////////
+/////////////////////////////  using [0-9]
+
+let andresStr = 'Andy1990';
+const andyRegex = /[a-z7-9]/gi;
+const dyRegex = /[^ad19]/gi; // letters a, d, numbers 1, 9  wouldn't include in set;
+
+// const matchingString2 = andresStr.match(dyRegex);
+// const matchingString = andresStr.match(andyRegex);
+
+// console.log(matchingString2);
+// console.log(matchingString); // show ["A", "n", "d", "y", "9", "8", "7"]
+
+// using '^' symbol allows to set lettes or numbers which shouldn't be matched
+
+//////1. 10 - find character that occur symbol '+'
+
+const andyPlusRegex = /[a-z9+]/gi;
+const matchingString3 = andresStr.match(andyPlusRegex);
+
+console.log(matchingString3);
+
+////////////// 1.11 symbols occurs 1 or more times - for this use '+' symbol , in case of symbol occurs 0 or more time should use '*';
 
 //////// for this i should train map method
 // let resultArr = ['3:1', '2:2', '0:1'];
