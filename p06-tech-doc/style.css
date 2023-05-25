@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main {
+  position: relative;
+  left: 170px;
+}
+nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 150px;
+}
+
+@media (min-width: 320px) {
+  nav {
+    position: relative;
+    width: 100vh;
+    margin: 0 auto;
+  }
+}
