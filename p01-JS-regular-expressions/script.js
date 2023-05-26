@@ -131,6 +131,8 @@ console.log(matchingString3);
 
 ////////////// 1.11 symbols occurs 1 or more times - for this use '+' symbol , in case of symbol occurs 0 or more time should use '*';
 
+///////////1.12 lazy matching '?'
+
 //////// for this i should train map method
 // let resultArr = ['3:1', '2:2', '0:1'];
 // let tempArr = [];
