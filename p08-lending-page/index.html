@@ -1,0 +1,109 @@
+<!--  
+
+
+
+
+
+
+
+
+
+You can watch an embedded product video with id="video"
+
+Your landing page has a form element with a corresponding id="form"
+
+Within the form, there is an input field with id="email" where you can enter an email address
+
+The #email input field should have placeholder text to let users know what the field is for
+
+The #email input field uses HTML5 validation to confirm that the entered text is an email address
+
+Within the form, there is a submit input with a corresponding id="submit"
+
+When you click the #submit element, the email is submitted to a static page (use 
+this mock URL: https://www.freecodecamp.com/email-submit)
+The navbar should always be at the top of the viewport
+Your product landing page should have at least one media query
+Your product landing page should utilize CSS flexbox at least once  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Tourist tents</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- // Your product landing page should have a header element with a corresponding id="header" -->
+      <header id="header">
+        <div class="header-title">
+          <!-- // * You can see an image within the header element with a corresponding id="header-img"
+          //(A logo would make a good image here) -->
+          <div>
+            <img src="/hike-logo.png" alt="logo image: tourist with backpack"
+            id="header-img"
+          </div>
+          <div>
+            <h1 class="header-title">Andy's outdoor shop</h1>
+          </div>
+        </div>
+        <!--  // Within the #header element, you can see a nav element with a corresponding id="nav-bar" -->
+        <nav id="nav-bar">
+          <ul>
+            <!-- //  You can see at least three clickable elements inside
+            // the nav element, each with the class nav-link -->
+            <li>
+              <a class="nav-link" href="#New_arrivals">New arrivals</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#Categories">Categories</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#Special_offer">Special offer</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#Instructions">Instructions</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#Contacts">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+        <main>
+          <!-- *  When you click a .nav-link button
+            * in the nav element, you are taken to the corresponding section of the landing page -->
+          <section id="New_arrivals"></section>
+          <section id="Categories"></section>
+          <section id="Special_offer">
+            <div class="section-title"></div>
+            <div class="section-content">
+              <p></p>
+              <fieldset>
+                <form id="form" action="https://www.freecodecamp.com/email-submit">
+                  <input
+                    name="email"
+                    id="email"
+                    type="email"
+                    placeholder="yourname@yoursite.com"
+                  />
+                  <input type="submit" id="submit">Submit</input>
+                </form>
+              </fieldset>
+            </div>
+          </section>
+          <section id="Instructions">
+            <div class="section-title"></div>
+            <div class="section-content">
+              <video id="video" src="/video1.mp4"></video>
+            </div>
+          </section>
+          <section id="Contacts"></section>
+        </main>
+      
+    </div>
+  </body>
+</html>
