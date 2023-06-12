@@ -16,7 +16,11 @@ nav {
   width: 150px;
 }
 
-@media (min-width: 320px) {
+@media (width: 720px) {
+  body {
+    background-color: red;
+  }
+
   nav {
     position: relative;
     width: 100vh;
